@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Stores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Animation duration
+            easing: 'ease-out-back', // Easing function for the animation
+            once: true,// Whether animation should happen only once - while scrolling down
+            delay: 100,
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = document.querySelectorAll('.product');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            });
+
+            products.forEach(product => {
+                product.style.animationPlayState = 'paused';
+                observer.observe(product);
+            });
+        });
+    </script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href=join.html >Enquire</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to Sai Stores</h1>
+        <p>Your one-stop shop for all your needs!</p>
+    </header>
+
+    <section id="products">
+        <h2>Our Products<br><br></h2>
+        <div class="product-container">
+            <div class="product" data-aos="fade-down">
+                <img src="images/freedom oil.png" alt="Product 1">
+                <h3>freedom oil</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/alasandulu.png" alt="Product 2">
+                <h3>alasandulu</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/chilli.png" alt="Product 3">
+                <h3>chilli</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/chillipowder.png" alt="Product 4">
+                <h3>chillipowder</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/macroni.png" alt="Product 5">
+                <h3>macroni</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/coconut.png" alt="Product 6">
+                <h3>coconut</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/deepam oil.png" alt="Product 7">
+                <h3>deepam oil</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/groundnut.png" alt="Product 8">
+                <h3>groundnut</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/jaggery.png" alt="Product 9">
+                <h3>jaggery</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/kandipappu.png" alt="Product 10">
+                <h3>kandipappu</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/maida.png" alt="Product 11">
+                <h3>maida</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/pappulu.png" alt="Product 12">
+                <h3>pappulu</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/sugar.png" alt="Product 13">
+                <h3>sugar</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/tamrind.png" alt="Product 14">
+                <h3>tamrind</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/turmeric podwer.png" alt="Product 15">
+                <h3>turmeric podwer</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/uddipappu.png" alt="Product 16">
+                <h3>uddipappu</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/vermicelli.png" alt="Product 17">
+                <h3>vermicelli</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/wheat.png" alt="Product 18">
+                <h3>wheat</h3>
+            </div>
+            <div class="product" data-aos="fade-down">
+                <img src="images/white onion.png" alt="Product 19">
+                <h3>white onion</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="delivery-info">
+        <h2 style="text-align: center; color: #333;">Door Delivery Information</h2><br>
+        <p style="font-size: 25px; color: #555; text-align: center; line-height: 1.5;">
+            Good news for our local customers in <strong>Rajampet</strong>! <br><br>
+            Place an order worth <strong>₹500 or more</strong>, and enjoy the convenience of <strong>door delivery</strong> right at your doorstep. 
+        </p>
+    </section>
+
+    <section id="location">
+        <div class="location-container">
+            <img src="images/sai stores.jpg" alt="Location">
+            <h2>
+                <a href="https://maps.app.goo.gl/fx1ESePph8yMMcQRA" target="_blank" rel="noopener noreferrer">
+                    View on Google Maps
+                </a>
+            </h2>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p><strong>Phone:</strong> +91 8897595016</p>
+            <p><strong>Email:</strong> <a href="mailto:saistores@example.com">kalagatlapranavasai@gmail.com</a></p>
+            <p><strong>Address:</strong> Sai Stores,Near Railway Station,Rajampet,Andhra Pradesh, 516115</p>
+            <p>
+                <strong>Google Maps:</strong> 
+                <a href="https://maps.app.goo.gl/fx1ESePph8yMMcQRA" target="_blank" rel="noopener noreferrer">
+                    View Location
+                </a>
+            </p>
+        </div>
+    </section>
+
+    
+    <section id="Enquire">
+        <a href="join.html"></a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Sai Stores.All rights reserved</p>
+        <p>Designed by Pranav...</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

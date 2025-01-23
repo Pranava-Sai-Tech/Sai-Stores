@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #fffdfd;
+}
+
+header {
+    background: #4caf4fe8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 15px; /* Rounded border */
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+ul li a:hover {
+    background-color: black;
+    color: white;
+    animation: flash 2s infinite; /* Flashing animation */
+}
+
+@keyframes flash {
+    0%, 100% {
+        box-shadow: 0 0 10px black;
+    }
+    50% {
+        box-shadow: 0 0 20px white;
+    }
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+section {
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+
+}
+
+.product {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    transform: translateY(-100px); /* Start off-screen */
+    width: calc(25% - 20px); /* Subtract margin/gap to ensure 4 items per row */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+
+}
+
+.product img {
+    width:100%;
+    height:auto;
+    display: block;
+    background-color:#ffffff;
+}
+
+
+.product-container .product {
+    animation: blastIn 0.8s ease-out forwards;
+}
+
+.product:nth-child(1) {
+    animation-delay: 0s;
+}
+.product:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.product:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.product:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.product:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.product:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+
+/* Centering the entire section */
+#location {
+    display: flex;
+    justify-content: center; /* Horizontally centers content */
+    align-items: center; /* Vertically centers content */
+    height: 70vh; /* Full viewport height to center in the middle of the page */
+    text-align: center; /* Align text inside the section */
+}
+
+/* Styling for the location container */
+.location-container {
+    display: inline-block;
+    max-width: 700px; /* Optional: Set a max width */
+}
+
+.location-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin-bottom: 10px; /* Space between image and link */
+}
+
+.location-container h2 a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.location-container h2 a:hover {
+    text-decoration: underline;
+}
+
+#contact {
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 30vh; /* Make the section fill the entire viewport height */
+    background-color: #fffdfd; /* Light gray background */
+    text-align: center; /* Center-align content */
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Remove any extra margins */
+    font-size: 22px;
+}
+
+.contact-container {
+    max-width: 800px; /* Limit container width */
+    background-color: #fffdfd; /* White background for content */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Space inside the box */
+   
+}
+
+/* ++++++++++++++++Join us page++++++++++ */
+
+.input-box {
+    display: grid;
+    grid-template-columns: 1fr; /* One column layout */
+    gap: 2rem; /* Reduce gap for better spacing */
+    margin-top: 5rem;
+    row-gap: 2rem; /* Space between rows */
+}
+
+.input-box input {
+    height: 5rem;
+    width: 50%; /* Ensure full width */
+    color: white;
+    background: var(--fade-color);
+    font-size: 2rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+}
+
+.Address-box textarea {
+    height: 10rem;
+    width: 50%; /* Ensure full width */
+    background: var(--fade-color);
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-top: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem; /* Adjust margin */
+    color: white;
+}
+
+.button-box {
+    display:flex;
+    gap: 1rem; /* Space between buttons */
+    margin-top: 2rem;
+    align-items: center; /* Center align buttons */
+    justify-content: center;
+    color: #007bff;
+}
+
+.button-box button {
+    max-width: 20rem; /* Optional: Limit max width */
+    background: rgba(255, 255, 255, 0.425);
+    color: #007bff;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.delivery-info{
+    padding: 20px; 
+    background-color: #fffdfd;
+    border: 1px solid #fffdfd; 
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    nav ul li a {
+        font-size: 14px;
+        margin: 5px 10px;
+    }
+
+    .contact-container {
+        font-size: 16px;
+    }
+
+    .product {
+        width: calc(50% - 20px); /* Two items per row */
+    }
+}
