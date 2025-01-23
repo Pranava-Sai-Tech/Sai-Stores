@@ -179,7 +179,7 @@ section {
 .input-box input {
     height: 5rem;
     width: 50%; /* Ensure full width */
-    color: white;
+    color: rgb(0, 0, 0);
     background: var(--fade-color);
     font-size: 2rem;
     padding-left: 1rem;
